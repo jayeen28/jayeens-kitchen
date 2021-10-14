@@ -10,6 +10,7 @@
 
 # production
 /build
+/jayeens-kitchen-contents
 
 # misc
 .DS_Store

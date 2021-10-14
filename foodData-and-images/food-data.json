@@ -2,42 +2,42 @@
     "breakfast": [
         {
             "id": 1,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/Breakfast/breakfast1.png",
             "title": "Bagel and Cream Cheese",
             "description": "A bagel and cream cheese (also known as bagel with cream cheese) is a common food pairing in American cuisine, the cuisine of New York City, and American Jewish cuisine, consisting in its basic form of a sliced bagel spread with cream cheese. The bagel with cream cheese is traditionally and most commonly served open-faced, sliced horizontally and spread with cream cheese and other toppings in the middle.[1] Beginning in the 1980s as bagels expanded in popularity beyond Jewish communities.",
             "price": "6.99"
         },
         {
             "id": 2,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/Breakfast/breakfast2.png",
             "title": "Breakfast Sandwich",
             "description": "Here at BA, we’re all about these breakfast sandwich recipes—the possibilities are endless! Are you a bagel lover? English muffin diehard? Classic classic egg ’n’ cheese? Whatever you’re craving, we’ve got something here that’ll fill any breakfast-sandwich-shaped holes in your heart. I’m talking about the green goddess sandwich that’s zingy, hearty, and packed with a (subjectively) serious amount of your daily veg needs. The leveled-up PB&J that sneaks pecan butter and a little miso into the mix. Or, for the sandwich liberalists, this cheesy, no-fuss breakfast burrito that scores high on the portable, compact, and delicious scales. For the full list of breakfast sandwich recipes, read on—and don’t forget the hot sauce.",
             "price": "9.99"
         },
         {
             "id": 3,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/Breakfast/breakfast3.png",
             "title": "Baked Chicken",
             "description": "If there is one recipe that every home cook should know, it's this baked chicken recipe. All you need is chicken, olive oil, salt, and pepper (and maybe some stock or white wine for gravy).We usually buy whole chickens and either cut them up ourselves or have the butcher do it for us. It's cheaper that way and we get giblets for gravy. You can do that or just use a package of whatever chicken parts you like—make baked chicken breasts for white meat, and baked chicken thighs and legs for dark.",
             "price": "10.99"
         },
         {
             "id": 4,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/Breakfast/breakfast4.png",
             "title": "Eggs Benedict",
             "description": "In an interview recorded in the Talk of the Town column of The New Yorker in 1942, the year before his death,Lemuel Benedict, a retired Wall Street stock broker, said that he had wandered into the Waldorf Hotel in 1894 and, hoping to find a cure for his morning hangover, ordered buttered toast, poached eggs, crisp bacon, and a hooker of hollandaise. Oscar Tschirky, the maître d'hôtel, was so impressed with the dish that he put it on the breakfast and luncheon menus but substituted ham for the bacon and a toasted English muffin for the toast.",
             "price": "8.99"
         },
         {
             "id": 5,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/Breakfast/breakfast5.png",
             "title": "Toast Croissant Fried egg",
             "description": "Ok. If I’m being honest, I’ve tried to make croissants a few times and never ended up with anything remotely edible.So I buy them from the bakery and they are absolutely perfect for these cheesy croissant sandwiches loaded with avocado, fresh tomato, and soft scrambled eggs!Remember that in the kitchen the perfect is the enemy of the good (and also the good breakfast).",
             "price": "19.99"
         },
         {
             "id": 6,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/Breakfast/breakfast6.png",
             "title": "Full Breakfast Fried Egg Toast Bruch",
             "description": "I’ve never had a real full English. At least not in England or anywhere in world in fact, except right here, at home. But a couple of weeks ago, Mike and I were chatting with a dude that moved here from England and the thing he said he missed the most was breakfast, specifically a Full English breakfast. He waxed poetic about the deliciousness for a good five minutes, but I wasn’t sold. Mike was nodding along, agreeing with him because he’s eaten many a full English in London, but me? Nope.",
             "price": "3.99"
@@ -46,42 +46,42 @@
     "lunch": [
         {
             "id": 1,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/lunch/lunch1.png",
             "title": "Healthy Meal Plan",
             "description": "lfahgkdfngkdnfkgnkdfnk",
             "price": "23.99"
         },
         {
             "id": 2,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/lunch/lunch2.png",
             "title": "Fried Chicken Bento",
             "description": "lfahgkdfngkdnfkgnkdfnk",
             "price": "9.99"
         },
         {
             "id": 3,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/lunch/lunch3.png",
             "title": "Tarragon-Rubbed-Salmon",
             "description": "lfahgkdfngkdnfkgnkdfnk",
             "price": "6.99"
         },
         {
             "id": 4,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/lunch/lunch4.png",
             "title": "Indian Lunch",
             "description": "lfahgkdfngkdnfkgnkdfnk",
             "price": "8.99"
         },
         {
             "id": 5,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/lunch/lunch5.png",
             "title": "Beaf Steak",
             "description": "lfahgkdfngkdnfkgnkdfnk",
             "price": "15.99"
         },
         {
             "id": 6,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/lunch/lunch6.png",
             "title": "Honey-Soy-Glazed Salmon with Peppers",
             "description": "lfahgkdfngkdnfkgnkdfnk",
             "price": "7.99"
@@ -90,42 +90,42 @@
     "dinner": [
         {
             "id": 1,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/Dinner/dinner1.png",
             "title": "Salmon with Grapefruit and Lentil Salad",
             "description": "lfahgkdfngkdnfkgnkdfnk",
             "price": "9.99"
         },
         {
             "id": 2,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/Dinner/dinner2.png",
             "title": "Lemony Salmon Piccata",
             "description": "lfahgkdfngkdnfkgnkdfnk",
             "price": "10.99"
         },
         {
             "id": 3,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/Dinner/dinner3.png",
             "title": "Pork Tenderloion with Quinoa Pilaf",
             "description": "lfahgkdfngkdnfkgnkdfnk",
             "price": "12.99"
         },
         {
             "id": 4,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/Dinner/dinner4.png",
             "title": "French Fries with Cheese",
             "description": "lfahgkdfngkdnfkgnkdfnk",
             "price": "8.99"
         },
         {
             "id": 5,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/Dinner/dinner5.png",
             "title": "Garlic Butter Baked Salmon",
             "description": "lfahgkdfngkdnfkgnkdfnk",
             "price": "6.99"
         },
         {
             "id": 6,
-            "img": "gfa",
+            "img": "https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/images/Dinner/dinner6.png",
             "title": "Baked Chicken",
             "description": "lfahgkdfngkdnfkgnkdfnk",
             "price": "9.99"

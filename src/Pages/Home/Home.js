@@ -26,6 +26,11 @@ const Home = () => {
             }
         }
     }
+    //tab click
+    console.log(allFood);
+    const tabClicked = (id) => {
+        console.log(id);
+    }
     return (
         <main>
             {/* banner-section */}
@@ -50,7 +55,7 @@ const Home = () => {
                             <button id="dinner-btn" onClick={() => sendTabReq('dinner')}>Dinner</button>
                         </div>
                         <div className="tab-items">
-                            {reqResponse.map(elem => <Tab foodData={elem} key={elem._id}></Tab>)}
+                            {reqResponse.map(elem => <Tab foodData={elem} tabClicked={tabClicked} key={elem._id}></Tab>)}
                         </div>
                     </div>
                 </div>

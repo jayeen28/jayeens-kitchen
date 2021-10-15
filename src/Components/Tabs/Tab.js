@@ -4,14 +4,13 @@ import './Tab.css'
 
 const Tab = ({ foodData }) => {
     let history = useHistory();
-    const { catagory, _id, img, title, price, } = foodData;
+    const { _id, img, title, price, } = foodData;
     //tab click
-    const tabClicked = (catagory, id) => {
+    const tabClicked = (id) => {
         history.push(`/foods/${id}`);
-        console.log(catagory);
     }
     return (
-        <div className="tab" onClick={() => tabClicked(catagory, _id)}>
+        <div className="tab" onClick={() => tabClicked(_id)}>
             <div className="tab-img">
                 <img src={img} alt="foodImage" className="img-fluid" />
             </div>

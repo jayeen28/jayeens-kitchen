@@ -1,0 +1,32 @@
+.footer-section{
+    background-color: #0D1117;
+}
+.ft-left{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px 0;
+}
+.ft-right ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+}
+.ft-right ul {
+    list-style: none;
+}
+
+.ft-right {
+    text-align: left;
+    display: flex;
+    gap: 50px;
+    font-size: 13px;
+}
+.ft-right ul li {
+    margin: 8px;
+}

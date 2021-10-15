@@ -17,8 +17,12 @@ const Home = () => {
     }, []);
     const sendTabReq = req => {
         for (const elem in allFood) {
+            document.getElementById(`${req}-btn`).style.borderBottom = '2px solid #E51A4B';
             if (elem === req) {
                 setreqResponse(allFood[req]);
+            }
+            else {
+                document.getElementById(`${elem}-btn`).style.border = 'none';
             }
         }
     }

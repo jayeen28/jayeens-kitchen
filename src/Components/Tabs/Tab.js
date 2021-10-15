@@ -2,9 +2,9 @@ import React from 'react';
 import './Tab.css'
 
 const Tab = ({ foodData, tabClicked }) => {
-    const { _id, img, title, price } = foodData;
+    const { catagory, _id, img, title, price } = foodData;
     return (
-        <div className="tab" onClick={() => tabClicked(_id)}>
+        <div className="tab" onClick={() => tabClicked(_id, catagory)}>
             <div className="tab-img">
                 <img src={img} alt="foodImage" className="img-fluid" />
             </div>

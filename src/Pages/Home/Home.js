@@ -27,9 +27,10 @@ const Home = () => {
         }
     }
     //tab click
-    console.log(allFood);
-    const tabClicked = (id) => {
-        console.log(id);
+    const tabClicked = (id, catagory) => {
+        const fixCat = allFood[catagory];
+        const getClickedFood = fixCat.filter(elem => { return elem._id === id });
+        console.log(getClickedFood);
     }
     return (
         <main>

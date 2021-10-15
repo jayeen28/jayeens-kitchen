@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import "./index.css";
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
+import SingleFood from './Pages/Foods/SingleFood/SingleFood';
 import Home from './Pages/Home/Home';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
@@ -18,7 +19,9 @@ function App() {
           <Route path='/home'>
             <Home />
           </Route>
-
+          <Route path='/foods/:foodId'>
+            <SingleFood />
+          </Route>
           <Route path='*'>
             <ErrorPage />
           </Route>

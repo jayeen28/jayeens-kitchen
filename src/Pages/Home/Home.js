@@ -45,7 +45,7 @@ const Home = () => {
                 <div className="container">
                     <div className="food-tabs">
                         <div className="tab-menu">
-                            <button id="breakfast-btn" onClick={() => sendTabReq('breakfast')}>Breakfast</button>
+                            <button id="breakfast-btn" onClick={() => sendTabReq('breakfast')} style={{ borderBottom: '2px solid #E51A4B' }}>Breakfast</button>
                             <button id="lunch-btn" onClick={() => sendTabReq('lunch')}>Lunch</button>
                             <button id="dinner-btn" onClick={() => sendTabReq('dinner')}>Dinner</button>
                         </div>

@@ -14,7 +14,7 @@ const Header = () => {
                             <img src={brandLogo} alt="band-logo" className="brand-logo" />
                         </div>
                         <div className="brand-name">
-                            <p className="bName-top">Jayeen's Kitchen</p>
+                            <p className="bName-top"><span style={{ color: '#E51A4B' }}>Jayeen's</span> Kitchen</p>
                             <p className="bName-bottom">FOODS</p>
                         </div>
                     </Navbar.Brand>

@@ -12,19 +12,29 @@ const Home = () => {
             .then(res => res.json())
             .then(data => {
                 setallFood(data);
-                setreqResponse(data.breakfast)
+                setreqResponse(data.filter(elem => elem.catagory === 'breakfast'))
             })
     }, []);
+    //tab buttons color management
+    const manageTabBtnColor = (setColor, removeColor1, removeColor2) => {
+        document.getElementById(`${setColor}-btn`).style.borderBottom = '2px solid #E51A4B';
+        document.getElementById(`${removeColor1}-btn`).style.border = 'none';
+        document.getElementById(`${removeColor2}-btn`).style.border = 'none';
+    }
+    //tabs management
     const sendTabReq = req => {
-        for (const elem in allFood) {
-            document.getElementById(`${req}-btn`).style.borderBottom = '2px solid #E51A4B';
-            if (elem === req) {
-                setreqResponse(allFood[req]);
+        const reqResult = []
+        const outOfResult = []
+        allFood.forEach(elem => {
+            if (elem.catagory === req) {
+                reqResult.push(elem);
             }
             else {
-                document.getElementById(`${elem}-btn`).style.border = 'none';
+                outOfResult.push(elem);
             }
-        }
+        })
+        setreqResponse(reqResult);
+        manageTabBtnColor(req, outOfResult[0].catagory, outOfResult[7].catagory);
     }
     return (
         <main>
@@ -50,7 +60,9 @@ const Home = () => {
                             <button id="dinner-btn" onClick={() => sendTabReq('dinner')}>Dinner</button>
                         </div>
                         <div className="tab-items">
-                            {reqResponse.map(elem => <Tab foodData={elem} key={elem._id}></Tab>)}
+                            {
+                                reqResponse.map(elem => <Tab foodData={elem} key={elem._id} />)
+                            }
                         </div>
                     </div>
                 </div>

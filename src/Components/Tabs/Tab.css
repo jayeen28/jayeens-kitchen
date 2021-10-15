@@ -1,0 +1,16 @@
+.tab-img {
+    height: 250px;
+    width: 250px;
+    margin: auto;
+}
+.tab:hover {
+    box-shadow: #b9b9b9 0px 4px 10px;
+}
+
+.tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    border-radius: 14px;
+}

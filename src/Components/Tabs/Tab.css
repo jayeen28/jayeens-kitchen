@@ -13,4 +13,20 @@
     justify-content: space-between;
     gap: 20px;
     border-radius: 14px;
+    padding: 20px 0px;
+}
+.tab-content p {
+    font-size: 15px;
+}
+
+.tab-content h3 {
+    font-size: 17px;
+    font-weight: 600;
+}
+.tab-content {
+    margin: 0 10px;
+}
+p.tab-price {
+    font-weight: 600;
+    font-size: 20px;
 }

@@ -2,8 +2,7 @@ import React from 'react';
 import './Tab.css'
 
 const Tab = ({ foodData }) => {
-    const { _id, img, title, price, description } = foodData;
-    console.log(_id, img, title, price, description)
+    const { img, title, price } = foodData;
     return (
         <div className="tab">
             <div className="tab-img">
@@ -12,7 +11,7 @@ const Tab = ({ foodData }) => {
             <div className="tab-content">
                 <h3>{title}</h3>
                 <p>How we dream about our future</p>
-                <p>Price: ${price}</p>
+                <p className="tab-price">Price: ${price}</p>
             </div>
         </div>
     );

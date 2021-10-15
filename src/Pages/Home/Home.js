@@ -10,7 +10,10 @@ const Home = () => {
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/Jayeen29/jayeens-kitchen/main/foodData-and-images/food-data.json')
             .then(res => res.json())
-            .then(data => setallFood(data))
+            .then(data => {
+                setallFood(data);
+                setreqResponse(data.breakfast)
+            })
     }, []);
     const sendTabReq = req => {
         for (const elem in allFood) {
@@ -38,9 +41,9 @@ const Home = () => {
                 <div className="container">
                     <div className="food-tabs">
                         <div className="tab-menu">
-                            <button onClick={() => sendTabReq('breakfast')}>Breakfast</button>
-                            <button onClick={() => sendTabReq('lunch')}>Lunch</button>
-                            <button onClick={() => sendTabReq('dinner')}>Dinner</button>
+                            <button id="breakfast-btn" onClick={() => sendTabReq('breakfast')}>Breakfast</button>
+                            <button id="lunch-btn" onClick={() => sendTabReq('lunch')}>Lunch</button>
+                            <button id="dinner-btn" onClick={() => sendTabReq('dinner')}>Dinner</button>
                         </div>
                         <div className="tab-items">
                             {reqResponse.map(elem => <Tab foodData={elem} key={elem._id}></Tab>)}

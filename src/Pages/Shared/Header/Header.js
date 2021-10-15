@@ -9,7 +9,15 @@ const Header = () => {
         <div className="header-section">
             <Navbar bg="light" expand="lg">
                 <Container>
-                    <Navbar.Brand href="ha"><img src={brandLogo} alt="band-logo" className="brand-logo" /><span>Jayeen's Kitchen</span></Navbar.Brand>
+                    <Navbar.Brand href="ha" className="brand">
+                        <div className="brand-img-shell">
+                            <img src={brandLogo} alt="band-logo" className="brand-logo" />
+                        </div>
+                        <div className="brand-name">
+                            <p className="bName-top">Jayeen's Kitchen</p>
+                            <p className="bName-bottom">FOODS</p>
+                        </div>
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll" className="justify-content-end">
                         <Nav
@@ -17,9 +25,9 @@ const Header = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link href="#action1"><img src={cartBtn} alt="cart button" style={{ height: '30px', width: '30px' }} /></Nav.Link>
-                            <Nav.Link href="#action1">Login</Nav.Link>
-                            <Nav.Link href="#action2">Sign up</Nav.Link>
+                            <Nav.Link href="#action1" className="cart-btn"><img src={cartBtn} alt="cart button" className="cart-img" /></Nav.Link>
+                            <Nav.Link href="#action1" className="login-btn px-3 py-2 m-2 text-dark">Login</Nav.Link>
+                            <Nav.Link href="#action2" className="signup-btn text-white m-2 px-4 py-2">Sign up</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

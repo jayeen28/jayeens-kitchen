@@ -17,7 +17,7 @@ const SingleFood = () => {
                 setfoodData(elem);
             }
         })
-    }, [foods]);
+    }, [foods, foodId]);
     const { img, title, description, price } = foodData;
     // console.log(_id, img, title, description, price)
     return (

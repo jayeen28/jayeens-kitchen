@@ -6,6 +6,8 @@ import SingleFood from './Pages/Foods/SingleFood/SingleFood';
 import Home from './Pages/Home/Home';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
+import Signin from './Pages/Signin/Signin';
+import Signup from './Pages/Signup/Signup';
 
 function App() {
   return (
@@ -21,6 +23,12 @@ function App() {
           </Route>
           <Route path='/foods/:foodId'>
             <SingleFood />
+          </Route>
+          <Route path='/signin'>
+            <Signin />
+          </Route>
+          <Route path='/signup'>
+            <Signup />
           </Route>
           <Route path='*'>
             <ErrorPage />

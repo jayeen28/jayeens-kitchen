@@ -3,3 +3,6 @@ body {
   margin: 0;
   font-family: Poppins, sans-serif!important;
 }
+body a{
+  text-decoration: none;
+}

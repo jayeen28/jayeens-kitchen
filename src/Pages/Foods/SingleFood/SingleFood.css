@@ -1,0 +1,40 @@
+.sf-food-contents {
+    display: flex;
+    justify-content: space-between;
+    padding: 4% 0;
+}
+.food-img {
+    width: 75%;
+    margin: auto;
+}
+.sf-left {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 15px 10px;
+    color: black;
+}
+
+.sf-left, .sf-right {
+    width: 50%;
+    margin: 0 20px;
+}
+.sf-left h1 {
+    font-size: 30px;
+}
+.sf-left p {
+    font-size: 15px;
+    line-height: 26px;
+    letter-spacing: .5px;
+    color: #3c3c3c;
+}
+.sf-left button {
+    border: none;
+    width: 150px;
+    background-color: #E51A4B;
+    color: white;
+    padding: 10px 0px;
+    border-radius: 20px;
+    margin-top: 10px;
+}

@@ -19,7 +19,6 @@ const SingleFood = () => {
         })
     }, [foods, foodId]);
     const { img, title, description, price } = foodData;
-    // console.log(_id, img, title, description, price)
     return (
         <div className="single-food-page">
             <div className="container">

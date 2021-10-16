@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 import brandLogo from '../../images/logo.png';
 const Signup = () => {
-
+    const { signUp } = useAuth();
+    const [userName, setuserName] = useState('');
+    const [email, setemail] = useState('')
+    const [pass, setpass] = useState('');
+    const handleUserName = e => {
+        setuserName(e.target.value);
+    }
+    const handleEmailChange = e => {
+        setemail(e.target.value);
+    }
+    const handlePassChange = e => {
+        setpass(e.target.value);
+    }
+    const handleSignUp = e => {
+        e.preventDefault();
+        signUp(email, pass, userName);
+    }
     return (
         <div>
             <div className="sin-contents">
@@ -21,13 +38,12 @@ const Signup = () => {
                         </Link>
                     </div>
                 </div>
-                <form className="signin-form">
-                    <input className="input-box" type="text" placeholder="Name" />
-                    <input className="input-box" type="email" id="sp-email" placeholder="Email" />
-                    <input className="input-box" type="password" id="sp-password" placeholder="Password" />
-                    <input className="input-box" type="password" placeholder="Confirm password" />
+                <form onSubmit={handleSignUp} className="signin-form">
+                    <input className="input-box" type="text" placeholder="Name" onBlur={handleUserName} />
+                    <input className="input-box" type="email" onBlur={handleEmailChange} id="sp-email" placeholder="Email" />
+                    <input className="input-box" type="password" onBlur={handlePassChange} id="sp-password" placeholder="Password" />
                     <input className="submit-btn" type="submit" value="Sign up" />
-                    <Link to='/signup'>Alredy registered?</Link>
+                    <Link to='/signin'>Alredy registered?</Link>
                 </form>
             </div>
         </div>

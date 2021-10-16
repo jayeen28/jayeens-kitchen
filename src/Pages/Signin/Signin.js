@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 import brandLogo from "../../images/logo.png";
 import './signin.css';
 const Signin = () => {
+    const { signIn } = useAuth();
+    const [email, setemail] = useState('');
+    const [pass, setpass] = useState('');
+    const handleEmailChange = e => {
+        setemail(e.target.value);
+    }
+    const handlePassChange = e => {
+        setpass(e.target.value);
+    }
+    //handle signin
+    const handleSignIn = e => {
+        e.preventDefault();
+        signIn(email, pass);
+    }
     return (
         <div className="signin-page">
             <div className="container">
@@ -22,9 +37,9 @@ const Signin = () => {
                             </Link>
                         </div>
                     </div>
-                    <form action="" className="signin-form">
-                        <input className="input-box" type="email" placeholder="Your email" />
-                        <input className="input-box" type="password" placeholder="Your password" />
+                    <form onSubmit={handleSignIn} className="signin-form">
+                        <input className="input-box" type="email" placeholder="Your email" onBlur={handleEmailChange} />
+                        <input className="input-box" type="password" placeholder="Your password" onBlur={handlePassChange} />
                         <input className="submit-btn" type="submit" value="Sign in" />
                         <Link to='/signup'>New here?</Link>
                     </form>

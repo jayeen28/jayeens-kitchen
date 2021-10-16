@@ -37,7 +37,6 @@ const useFirebase = () => {
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
-                console.log(user);
             } else {
                 // User is signed out
                 // ...

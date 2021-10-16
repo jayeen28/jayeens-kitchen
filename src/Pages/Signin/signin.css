@@ -1,0 +1,38 @@
+form.signin-form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: auto;
+    gap: 25px;
+}
+.sin-left{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+.sin-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    padding: 5% 0;
+}
+.input-box {
+    background-color: #ebebeb9e;
+    border: none;
+    padding: 15px 10px;
+    border-radius: 8px;
+}
+input.input-box::placeholder{
+    font-size: 14.5px;
+    letter-spacing: .6px;
+}
+input.submit-btn {
+    border: none;
+    padding: 15px 10px;
+    border-radius: 12px;
+    background-color: #E51A4B;
+    color: white;
+    font-size: 14.5px;
+    letter-spacing: .6px;
+}

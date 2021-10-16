@@ -28,7 +28,7 @@ const Header = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Link href="#action1" className="cart-btn"><img src={cartBtn} alt="cart button" className="cart-img" /></Link>
+                            <Link to='/' className="cart-btn"><img src={cartBtn} alt="cart button" className="cart-img" /></Link>
                             <Link to='/signin' className="login-btn px-3 py-2 m-2 text-dark">Sign in</Link>
                             <Link to='/signup' className="signup-btn text-white m-2 px-4 py-2">Sign up</Link>
                         </Nav>

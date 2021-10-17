@@ -43,8 +43,8 @@ const Home = () => {
                 <div className="b-head">
                     <h1>Best food waiting for your belly</h1>
                 </div>
-                <div className="b-search">
-                    <form action="">
+                <div className="b-body">
+                    <form action="" className="b-search">
                         <input type="text" id="bs-input" placeholder="Search food items" className="bs-input" />
                         <input type="submit" value="Search" className="bs-submit" />
                     </form>

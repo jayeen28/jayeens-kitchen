@@ -39,3 +39,10 @@ input.submit-btn {
 .google-btn{
     cursor: pointer;
 }
+
+/* media query */
+@media only screen and (max-width:768px){
+    form.signin-form{
+        width: 90%;
+    }
+}

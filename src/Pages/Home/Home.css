@@ -11,8 +11,18 @@
     flex-direction: column;
     gap: 50px;
 }
+.b-body {
+    width: 100%;
+}
 .food-tabs-section {
-    padding: 5% 0%;
+    padding: 3% 0%;
+}
+form.b-search {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    text-align: center;
 }
 input.bs-input::placeholder {
     font-weight: 300;
@@ -42,11 +52,49 @@ input.bs-submit {
     gap: 40px;
 }
 .tab-menu {
-    margin: 30px 0px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    width: 55%;
+    margin: 40px auto;
 }
 .tab-menu button {
     border: none;
     background-color: transparent;
     padding: 3px 15px;
     margin: 0 20px;
+}
+
+/* media query*/
+@media only screen and (max-width:768px){
+    .banner-section{
+        background-position: unset;  
+        gap: 20px;
+    }
+    .b-head h1 {
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .tab-items{
+        grid-template-columns:repeat(1,1fr);
+    }
+    .tab-menu{
+        display: grid;
+        width: 95%;
+        margin: 20px auto;
+    }
+    .tab-menu button{
+        padding: 3px;
+        margin: 0 10px;
+    }
+    input.bs-input{
+        width:300px
+    }
+    .bs-submit {
+        font-size: 15px;
+    }
+    
+    input.bs-input::placeholder {
+        font-size: 15px;
+    }
 }

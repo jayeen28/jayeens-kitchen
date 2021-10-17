@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import brandLogo from "../../images/logo.png";
 import './signin.css';
 const Signin = () => {
-    const { signIn } = useAuth();
+    const { signIn, setuser, seterror, setisLoading } = useAuth();
     const [email, setemail] = useState('');
     const [pass, setpass] = useState('');
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/home';
+    console.log(location);
     const handleEmailChange = e => {
         setemail(e.target.value);
     }
@@ -16,7 +20,14 @@ const Signin = () => {
     //handle signin
     const handleSignIn = e => {
         e.preventDefault();
-        signIn(email, pass);
+        signIn(email, pass)
+            .then(res => {
+                setuser(res.user);
+                history.push(redirect_uri);
+            })
+            .catch(error => seterror(error.message))
+            .finally(() => setisLoading(false))
+
     }
     return (
         <div className="signin-page">

@@ -31,12 +31,7 @@ const useFirebase = () => {
     //sign in user
     const signIn = (email, pass) => {
         setisLoading(true);
-        signInWithEmailAndPassword(auth, email, pass)
-            .then(res => {
-                setuser(res.user);
-            })
-            .catch(error => seterror(error.message))
-            .finally(() => setisLoading(false))
+        return signInWithEmailAndPassword(auth, email, pass);
     }
     //observe user
     useEffect(() => {
@@ -61,9 +56,12 @@ const useFirebase = () => {
         signUp,
         signIn,
         signout,
+        setuser,
         isLoading,
+        setisLoading,
         user,
-        error
+        error,
+        seterror
     }
 }
 export default useFirebase;

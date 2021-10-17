@@ -11,20 +11,14 @@ const useFirebase = () => {
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
     //sign up user
-    const signUp = (email, password, name) => {
+    const signUp = (email, password, userName) => {
         setisLoading(true);
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(res => {
-                setuser(res.user);
-                updateName(name);
-            })
-            .catch(error => seterror(error.message))
-            .finally(() => setisLoading(false))
+        return createUserWithEmailAndPassword(auth, email, password, userName);
     }
     //update name
-    const updateName = name => {
+    const updateName = userName => {
         updateProfile(auth.currentUser, {
-            displayName: name
+            displayName: userName
         }).then(() => {
         });
     }
@@ -57,6 +51,7 @@ const useFirebase = () => {
     }
     return {
         signUp,
+        updateName,
         signIn,
         signInGoogle,
         signout,

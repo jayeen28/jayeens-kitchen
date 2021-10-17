@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import brandLogo from '../../images/logo.png';
 const Signup = () => {
-    const { signUp } = useAuth();
+    const { signUp, updateName, setuser, seterror, setisLoading } = useAuth();
     const [userName, setuserName] = useState('');
     const [email, setemail] = useState('')
     const [pass, setpass] = useState('');
+    const history = useHistory();
+    const redirect_uri = '/home';
+    //get sign up form inputs 
     const handleUserName = e => {
         setuserName(e.target.value);
     }
@@ -16,9 +19,17 @@ const Signup = () => {
     const handlePassChange = e => {
         setpass(e.target.value);
     }
+    //handle signup
     const handleSignUp = e => {
         e.preventDefault();
-        signUp(email, pass, userName);
+        signUp(email, pass, userName)
+            .then(res => {
+                setuser(res.user);
+                updateName(userName);
+                history.push(redirect_uri)
+            })
+            .catch(error => seterror(error.message))
+            .finally(() => setisLoading(false))
     }
     return (
         <div>

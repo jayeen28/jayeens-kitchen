@@ -3,14 +3,14 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import brandLogo from "../../images/logo.png";
 import './signin.css';
+import googleBtn from '../../images/google-btn.png'
 const Signin = () => {
-    const { signIn, setuser, seterror, setisLoading } = useAuth();
+    const { signIn, setuser, seterror, setisLoading, signInGoogle } = useAuth();
     const [email, setemail] = useState('');
     const [pass, setpass] = useState('');
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home';
-    console.log(location);
     const handleEmailChange = e => {
         setemail(e.target.value);
     }
@@ -27,7 +27,12 @@ const Signin = () => {
             })
             .catch(error => seterror(error.message))
             .finally(() => setisLoading(false))
-
+    }
+    const googleSignIn = () => {
+        signInGoogle()
+            .then(res => {
+                history.push(redirect_uri);
+            });
     }
     return (
         <div className="signin-page">
@@ -54,6 +59,11 @@ const Signin = () => {
                         <input className="submit-btn" type="submit" value="Sign in" />
                         <Link to='/signup'>New here?</Link>
                     </form>
+                    <div className="brand-signin-btns">
+                        <div className="google-btn">
+                            <img onClick={googleSignIn} src={googleBtn} alt="googlebtn" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div >

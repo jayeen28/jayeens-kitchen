@@ -36,3 +36,6 @@ input.submit-btn {
     font-size: 14.5px;
     letter-spacing: .6px;
 }
+.google-btn{
+    cursor: pointer;
+}

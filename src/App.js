@@ -7,6 +7,7 @@ import SingleFood from './Pages/Foods/SingleFood/SingleFood';
 import Home from './Pages/Home/Home';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
+import PrivateRoute from './Pages/Signin/PrivateRoute/PrivateRoute';
 import Signin from './Pages/Signin/Signin';
 import Signup from './Pages/Signup/Signup';
 
@@ -23,9 +24,9 @@ function App() {
             <Route path='/home'>
               <Home />
             </Route>
-            <Route path='/foods/:foodId'>
+            <PrivateRoute path='/foods/:foodId'>
               <SingleFood />
-            </Route>
+            </PrivateRoute>
             <Route path='/signin'>
               <Signin />
             </Route>

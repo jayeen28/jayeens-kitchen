@@ -2,10 +2,14 @@ import React from 'react';
 import './Header.css'
 import cartBtn from '../../../images/cart.png';
 import brandLogo from '../../../images/logo.png'
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-
+import useAuth from '../../../Hooks/useAuth';
 const Header = () => {
+    const { user, signout, isLoading } = useAuth();
+    if (isLoading) {
+        return <Spinner animation="grow" variant="danger" />
+    }
     return (
         <header className="header-section">
             <Navbar bg="light" expand="lg">
@@ -29,8 +33,15 @@ const Header = () => {
                             navbarScroll
                         >
                             <Link to='/' className="cart-btn"><img src={cartBtn} alt="cart button" className="cart-img" /></Link>
-                            <Link to='/signin' className="login-btn px-3 py-2 m-2 text-dark">Sign in</Link>
-                            <Link to='/signup' className="signup-btn text-white m-2 px-4 py-2">Sign up</Link>
+                            {
+                                user?.email ?
+                                    <Nav.Link onClick={(e) => { e.preventDefault(); signout() }} className="signup-btn text-white m-2 px-4 py-2">Sign out</Nav.Link>
+                                    :
+                                    <>
+                                        <Link to='/signin' className="login-btn px-3 py-2 m-2 text-dark">Sign in</Link>
+                                        <Link to='/signup' className="signup-btn text-white m-2 px-4 py-2">Sign up</Link>
+                                    </>
+                            }
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

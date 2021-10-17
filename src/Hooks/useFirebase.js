@@ -7,16 +7,19 @@ initializeAuthentication();
 const useFirebase = () => {
     const [user, setuser] = useState('');
     const [error, seterror] = useState('');
+    const [isLoading, setisLoading] = useState(true);
     const auth = getAuth();
 
     //sign up user
     const signUp = (email, password, name) => {
+        setisLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then(res => {
                 setuser(res.user);
                 updateName(name);
             })
-            .catch(error => seterror(error.message));
+            .catch(error => seterror(error.message))
+            .finally(() => setisLoading(false))
     }
     //update name
     const updateName = name => {
@@ -27,33 +30,38 @@ const useFirebase = () => {
     }
     //sign in user
     const signIn = (email, pass) => {
+        setisLoading(true);
         signInWithEmailAndPassword(auth, email, pass)
             .then(res => {
                 setuser(res.user);
             })
-            .catch(error => seterror(error.message));
+            .catch(error => seterror(error.message))
+            .finally(() => setisLoading(false))
     }
     //observe user
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
+                setuser(user);
             } else {
-                // User is signed out
-                // ...
             }
+            setisLoading(false);
         });
         return () => unsubscribed;
     }, [])
     //sign out user
     const signout = () => {
+        setisLoading(true);
         signOut(auth)
-            .then(() => { })
+            .then(() => { setuser({}) })
+            .catch(error => error.message)
+            .finally(() => setisLoading(false))
     }
-    console.log(user);
     return {
         signUp,
         signIn,
         signout,
+        isLoading,
         user,
         error
     }
